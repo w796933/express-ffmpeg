@@ -4,8 +4,9 @@ cd ~
 mkdir git
 cd git
 git clone https://github.com/cnpm/nvm.git
-source ~/git/nvm/nvm.sh​
+source ~/git/nvm/nvm.sh
 echo "source ~/git/nvm/nvm.sh" >> ~/.bashrc
+source  ~/.bashrc
 nvm install 8.11.2
 nvm alias default v8.11.2
 npm install express -gd
@@ -31,7 +32,7 @@ npm install -g pm2
 nginx=stable
 add-apt-repository ppa:nginx/$nginx
 apt-get update
-apt-get install nginx
+apt-get install nginx -y
 cd /etc/nginx/sites-available
 echo -n 'Enter your site:'
 read site
@@ -68,7 +69,7 @@ if (\$invalid_referer) {
 cd /
 mkdir www
 cd www
-git clone https://gitee.com/quazero/express-ffmpeg
+git clone https://github.com/w796933/express-ffmpeg
 cd express-ffmpeg
 npm install
 mkdir config
